@@ -1,0 +1,9 @@
+GET  /Cadastro/novo               controllers.CadastroController.formularioDeNovoCadastro
+POST /Cadastro/novo               controllers.CadastroController.salvaNovoCadastro
+
+# API
+GET  /api/Cadastros               controllers.ApiController.comFiltros
+GET  /api/Cadastros/todos         controllers.ApiController.todos
+GET  /api/Cadastros/tipo/:tipo    controllers.ApiController.doTipo(tipo)
+
+GET  /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

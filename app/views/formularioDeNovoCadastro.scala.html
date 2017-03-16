@@ -1,0 +1,14 @@
+@(formulario: Form[Cadastro])
+
+@import b3.vertical.fieldConstructor
+
+@main("Desafio Ustore") {
+	@b3.form(routes.ProdutoController.salvaNovoCadastro) {
+		<h1>Desafio Ustore</h1>
+		@b3.text(formulario("nome"), '_label -> "nome")
+		@b3.text(formulario("email"), '_label -> "email")
+		@b3.text(formulario("senha"), '_label -> "senha")
+		@b3.number(formulario("telefone"), '_label -> "telefone")
+		@b3.submit('class -> "btn btn-primary") { Cadastrar }
+	}	
+}
